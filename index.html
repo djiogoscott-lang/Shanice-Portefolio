@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Mago Kamdem Schanice — Conceptrice d'interfaces & Développeuse Web, dédiée à un design éthique, accessible et centré sur l'humain.">
+    <meta name="author" content="Mago Kamdem Schanice">
+    <title>Mago Kamdem Schanice — Portfolio · UX/UI Designer & Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#accueil" class="nav__logo" aria-label="Retour à l'accueil">
+                <span class="nav__logo-mark">S</span>
+                <span class="nav__logo-text">chanice<em>.</em></span>
+            </a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#accueil" class="nav__link">Accueil</a></li>
+                <li><a href="#apropos" class="nav__link">À propos</a></li>
+                <li><a href="#projets" class="nav__link">Projets</a></li>
+                <li><a href="#philosophie" class="nav__link">Philosophie</a></li>
+                <li><a href="#contact" class="nav__link nav__link--cta">Me contacter</a></li>
+            </ul>
+
+            <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="accueil">
+            <div class="hero__bg" aria-hidden="true">
+                <div class="hero__orb hero__orb--1"></div>
+                <div class="hero__orb hero__orb--2"></div>
+                <div class="hero__orb hero__orb--3"></div>
+            </div>
+
+            <div class="container hero__container">
+                <div class="hero__content reveal">
+                    <p class="hero__overline"><span class="hero__overline-line"></span> Portfolio · 2026</p>
+
+                    <h1 class="hero__title">
+                        Concevoir le digital
+                        <br>
+                        avec <em>sens</em>
+                        <br>
+                        &amp; <em>élégance</em>.
+                    </h1>
+
+                    <p class="hero__subtitle">
+                        Je suis <strong>Mago Kamdem Schanice</strong>, conceptrice d'interfaces et développeuse web. Je donne vie à des expériences numériques <em>intuitives</em>, <em>esthétiques</em> et profondément <em>centrées sur l'humain</em>.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#projets" class="btn btn--primary">
+                            <span>Voir mes projets</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#contact" class="btn btn--ghost">
+                            <span>Travaillons ensemble</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__meta">
+                        <div class="hero__meta-item">
+                            <span class="hero__meta-number">2+</span>
+                            <span class="hero__meta-label">Projets réalisés</span>
+                        </div>
+                        <div class="hero__meta-divider"></div>
+                        <div class="hero__meta-item">
+                            <span class="hero__meta-number">100%</span>
+                            <span class="hero__meta-label">Design éthique</span>
+                        </div>
+                        <div class="hero__meta-divider"></div>
+                        <div class="hero__meta-item">
+                            <span class="hero__meta-number">∞</span>
+                            <span class="hero__meta-label">Passion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual reveal" aria-hidden="true">
+                    <div class="hero__card hero__card--main">
+                        <div class="hero__card-inner">
+                            <span class="hero__card-tag">UX · UI · Code</span>
+                            <h2 class="hero__card-title">Mago<br>Kamdem<br>Schanice</h2>
+                            <div class="hero__card-footer">
+                                <span>Designer &amp; Developer</span>
+                                <span class="hero__card-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__card hero__card--floating">
+                        <div class="hero__card-dot hero__card-dot--green"></div>
+                        <span>Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#apropos" class="hero__scroll" aria-label="Défiler vers le bas">
+                <span>Découvrir</span>
+                <div class="hero__scroll-line"></div>
+            </a>
+        </section>
+
+        <section class="about section" id="apropos">
+            <div class="container about__container">
+                <div class="about__text-wrap reveal">
+                    <span class="section__tag">À propos de moi</span>
+                    <h2 class="section__title">
+                        Une approche <em>humaine</em><br>du numérique.
+                    </h2>
+                    <p class="about__lead">
+                        Ma vision est claire : concevoir des produits digitaux avec une approche <strong>éthique, inclusive et accessible</strong>.
+                    </p>
+                    <p class="about__text">
+                        Je crois en un web respectueux — du temps des utilisateurs, de leur attention, de leur diversité. Au croisement du design visuel (UX/UI) et du code, je fusionne ces deux univers pour donner vie à des projets qui ont du sens. Élégants dans la forme, justes dans le fond.
+                    </p>
+
+                    <a href="#contact" class="about__link">
+                        <span>Discutons de votre projet</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+
+                <div class="about__values reveal">
+                    <article class="value">
+                        <div class="value__index">01</div>
+                        <h3 class="value__title">Éthique</h3>
+                        <p class="value__text">Un design responsable, transparent et respectueux des utilisateurs.</p>
+                    </article>
+                    <article class="value">
+                        <div class="value__index">02</div>
+                        <h3 class="value__title">Esthétique</h3>
+                        <p class="value__text">Des interfaces raffinées au service d'une lisibilité parfaite.</p>
+                    </article>
+                    <article class="value">
+                        <div class="value__index">03</div>
+                        <h3 class="value__title">Accessibilité</h3>
+                        <p class="value__text">Un numérique inclusif, conçu pour être utilisé par tous.</p>
+                    </article>
+                    <article class="value">
+                        <div class="value__index">04</div>
+                        <h3 class="value__title">Précision</h3>
+                        <p class="value__text">Un code propre, sémantique et performant à chaque ligne.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projets">
+            <div class="container">
+                <div class="section__heading section__heading--center reveal">
+                    <span class="section__tag">Projets sélectionnés</span>
+                    <h2 class="section__title">
+                        Quelques <em>réalisations</em><br>choisies avec soin.
+                    </h2>
+                    <p class="section__subtitle">Une sélection de projets qui incarnent ma vision du design et du code.</p>
+                </div>
+
+                <div class="projects__grid">
+
+                    <article class="project reveal">
+                        <div class="project__visual">
+                            <div class="project__mock project__mock--calc">
+                                <div class="calc-screen">
+                                    <span class="calc-result">2 547</span>
+                                </div>
+                                <div class="calc-grid">
+                                    <span></span><span></span><span></span><span class="calc-accent"></span>
+                                    <span></span><span></span><span></span><span class="calc-accent"></span>
+                                    <span></span><span></span><span></span><span class="calc-accent"></span>
+                                    <span></span><span></span><span></span><span class="calc-accent"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <div class="project__head">
+                                <span class="project__index">Projet 01</span>
+                                <span class="project__year">2026</span>
+                            </div>
+                            <h3 class="project__title">Application Calculatrice</h3>
+                            <p class="project__description">
+                                Conception et développement d'une calculatrice interactive. Une attention particulière a été portée à l'<strong>ergonomie de l'interface</strong> pour une saisie rapide et fluide, ainsi qu'à la <strong>logique mathématique</strong> en JavaScript garantissant des résultats sans faille.
+                            </p>
+                            <ul class="project__tags">
+                                <li>UI Design</li>
+                                <li>JavaScript</li>
+                                <li>Logique algorithmique</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__visual">
+                            <div class="project__mock project__mock--weather">
+                                <div class="weather-top">
+                                    <span class="weather-city">Yaoundé</span>
+                                    <span class="weather-temp">26°</span>
+                                </div>
+                                <div class="weather-sun"></div>
+                                <div class="weather-bars">
+                                    <span style="height: 40%"></span>
+                                    <span style="height: 65%"></span>
+                                    <span style="height: 85%"></span>
+                                    <span style="height: 60%"></span>
+                                    <span style="height: 45%"></span>
+                                    <span style="height: 70%"></span>
+                                    <span style="height: 55%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <div class="project__head">
+                                <span class="project__index">Projet 02</span>
+                                <span class="project__year">2026</span>
+                            </div>
+                            <h3 class="project__title">Site Météo Dynamique</h3>
+                            <p class="project__description">
+                                Création d'une application web météorologique en <strong>temps réel</strong>. Un travail approfondi sur la hiérarchie visuelle a permis de rendre les données climatiques facilement lisibles, accompagné d'une <strong>intégration fluide</strong> et performante d'API externes.
+                            </p>
+                            <ul class="project__tags">
+                                <li>UX/UI</li>
+                                <li>API REST</li>
+                                <li>Design de données</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="philosophy section" id="philosophie">
+            <div class="container">
+                <div class="philosophy__card reveal">
+                    <span class="philosophy__quote-mark" aria-hidden="true">"</span>
+                    <blockquote class="philosophy__quote">
+                        Concevoir, ce n'est pas seulement <em>dessiner</em>. C'est écouter, comprendre, et traduire le besoin humain en <em>geste numérique</em> simple, juste et beau.
+                    </blockquote>
+                    <footer class="philosophy__author">
+                        <div class="philosophy__author-line"></div>
+                        <span>Mago Kamdem Schanice</span>
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact__container">
+                <div class="section__heading section__heading--center reveal">
+                    <span class="section__tag">Travaillons ensemble</span>
+                    <h2 class="section__title">
+                        Construisons quelque chose<br><em>de beau</em>, ensemble.
+                    </h2>
+                    <p class="section__subtitle">
+                        Une idée, un projet, ou simplement l'envie d'échanger ? Je serais ravie d'en discuter avec vous.
+                    </p>
+                </div>
+
+                <div class="contact__grid reveal">
+
+                    <a href="mailto:Schanicedaila@gmail.com" class="contact__card" aria-label="Envoyer un email">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <span class="contact__card-label">Email</span>
+                        <span class="contact__card-value">Schanicedaila@gmail.com</span>
+                        <span class="contact__card-action">
+                            <span>Envoyer un message</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </span>
+                    </a>
+
+                    <a href="tel:+237657460348" class="contact__card" aria-label="Appeler par téléphone">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <span class="contact__card-label">Téléphone</span>
+                        <span class="contact__card-value">+237 657 460 348</span>
+                        <span class="contact__card-action">
+                            <span>Appeler maintenant</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </span>
+                    </a>
+
+                    <div class="contact__card contact__card--static">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <span class="contact__card-label">Disponibilité</span>
+                        <span class="contact__card-value">Ouverte aux collaborations</span>
+                        <span class="contact__card-action contact__card-action--static">
+                            <span class="contact__status-dot"></span>
+                            <span>En ligne</span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">Schanice<em>.</em></span>
+                <p>Designer &amp; Developer · 2026</p>
+            </div>
+            <p class="footer__credit">
+                Conçu &amp; développé avec <em>soin</em> par Mago Kamdem Schanice.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            'use strict';
+
+            // ============ MENU BURGER ============
+            const toggle = document.getElementById('navToggle');
+            const menu = document.getElementById('navMenu');
+            const header = document.getElementById('header');
+
+            if (toggle && menu) {
+                toggle.addEventListener('click', function () {
+                    const isOpen = menu.classList.toggle('is-open');
+                    toggle.classList.toggle('is-active');
+                    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
+                });
+
+                document.querySelectorAll('.nav__link').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        menu.classList.remove('is-open');
+                        toggle.classList.remove('is-active');
+                        toggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+
+            // ============ HEADER AU SCROLL ============
+            if (header) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 30) {
+                        header.classList.add('is-scrolled');
+                    } else {
+                        header.classList.remove('is-scrolled');
+                    }
+                }, { passive: true });
+            }
+
+            // ============ FADE-IN AU SCROLL ============
+            const revealEls = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+                revealEls.forEach(function (el) {
+                    observer.observe(el);
+                });
+            } else {
+                revealEls.forEach(function (el) {
+                    el.classList.add('is-visible');
+                });
+            }
+
+            // ============ GLOW QUI SUIT LA SOURIS ============
+            const glow = document.querySelector('.cursor-glow');
+            if (glow && window.matchMedia('(pointer: fine)').matches) {
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
+
+                window.addEventListener('mousemove', function (e) {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+
+                function animate() {
+                    currentX += (mouseX - currentX) * 0.08;
+                    currentY += (mouseY - currentY) * 0.08;
+                    glow.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
+                    requestAnimationFrame(animate);
+                }
+                animate();
+            }
+        })();
+    </script>
+
+</body>
+</html>
