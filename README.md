@@ -39,7 +39,7 @@ Déployé sur **Vercel** — déploiement automatique à chaque push.
 
 ## Contact
 
-- **Email** — Schanicedaila@gmail.com
+- **Email** — schanicedaila84@gmail.com
 - **Téléphone** — +237 657 460 348
 
 ---
