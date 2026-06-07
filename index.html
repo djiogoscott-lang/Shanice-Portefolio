@@ -13,7 +13,22 @@
 </head>
 <body>
 
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__content">
+            <h1 class="preloader__name">
+                <span>S</span><span>C</span><span>H</span><span>A</span><span>N</span><span>I</span><span>C</span><span>E</span>
+            </h1>
+            <p class="preloader__subtitle">MAGO KAMDEM <span class="preloader__sep">·</span> Schanice</p>
+            <p class="preloader__tag">UX/UI DESIGNER <span class="preloader__sep">·</span> WEB DEVELOPER <span class="preloader__sep">·</span> CAMEROUN</p>
+            <div class="preloader__bar">
+                <div class="preloader__bar-fill" id="preloaderBar"></div>
+            </div>
+            <div class="preloader__percent" id="preloaderPercent">0%</div>
+        </div>
+    </div>
+
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
     <header class="header" id="header">
         <nav class="nav container">
@@ -393,24 +408,82 @@
                 });
             }
 
-            // ============ GLOW QUI SUIT LA SOURIS ============
-            const glow = document.querySelector('.cursor-glow');
-            if (glow && window.matchMedia('(pointer: fine)').matches) {
-                let mouseX = 0, mouseY = 0;
-                let currentX = 0, currentY = 0;
+            // ============ PRELOADER ============
+            const preloader = document.getElementById('preloader');
+            const bar = document.getElementById('preloaderBar');
+            const percent = document.getElementById('preloaderPercent');
+
+            if (preloader && bar && percent) {
+                document.body.classList.add('is-loading');
+                const duration = 2400;
+                const startTime = performance.now();
+
+                function tickLoader(now) {
+                    const elapsed = now - startTime;
+                    const eased = 1 - Math.pow(1 - Math.min(elapsed / duration, 1), 3);
+                    const progress = eased * 100;
+                    bar.style.width = progress + '%';
+                    percent.textContent = Math.floor(progress) + '%';
+
+                    if (progress < 100) {
+                        requestAnimationFrame(tickLoader);
+                    } else {
+                        setTimeout(function () {
+                            preloader.classList.add('is-hidden');
+                            document.body.classList.remove('is-loading');
+                            setTimeout(function () {
+                                preloader.remove();
+                            }, 900);
+                        }, 350);
+                    }
+                }
+                requestAnimationFrame(tickLoader);
+            }
+
+            // ============ CURSEUR PERSONNALISÉ ============
+            const cursorDot = document.getElementById('cursorDot');
+            const cursorRing = document.getElementById('cursorRing');
+
+            if (cursorDot && cursorRing && window.matchMedia('(pointer: fine)').matches) {
+                document.body.classList.add('has-custom-cursor');
+
+                let mouseX = -100, mouseY = -100;
+                let ringX = -100, ringY = -100;
 
                 window.addEventListener('mousemove', function (e) {
                     mouseX = e.clientX;
                     mouseY = e.clientY;
+                    cursorDot.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px)';
                 });
 
-                function animate() {
-                    currentX += (mouseX - currentX) * 0.08;
-                    currentY += (mouseY - currentY) * 0.08;
-                    glow.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
-                    requestAnimationFrame(animate);
+                function animateCursor() {
+                    ringX += (mouseX - ringX) * 0.18;
+                    ringY += (mouseY - ringY) * 0.18;
+                    cursorRing.style.transform = 'translate(' + ringX + 'px, ' + ringY + 'px)';
+                    requestAnimationFrame(animateCursor);
                 }
-                animate();
+                animateCursor();
+
+                const interactive = document.querySelectorAll('a, button, .project, .value, .contact__card');
+                interactive.forEach(function (el) {
+                    el.addEventListener('mouseenter', function () {
+                        cursorRing.classList.add('is-hover');
+                        cursorDot.classList.add('is-hover');
+                    });
+                    el.addEventListener('mouseleave', function () {
+                        cursorRing.classList.remove('is-hover');
+                        cursorDot.classList.remove('is-hover');
+                    });
+                });
+
+                document.addEventListener('mouseleave', function () {
+                    cursorDot.style.opacity = '0';
+                    cursorRing.style.opacity = '0';
+                });
+                document.addEventListener('mouseenter', function () {
+                    cursorDot.style.opacity = '1';
+                    cursorRing.style.opacity = '1';
+                });
             }
         })();
     </script>
